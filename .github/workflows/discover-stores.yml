@@ -1,0 +1,72 @@
+name: Refresh kebab chain stores
+
+on:
+  workflow_dispatch:
+    inputs:
+      brand:
+        description: "Which brand to scan"
+        required: true
+        default: "both"
+        type: choice
+        options:
+          - both
+          - gdk
+          - bababoom
+  schedule:
+    - cron: "23 5 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        include:
+          - brand_key: gdk
+            output_file: stores_gdk.json
+          - brand_key: bababoom
+            output_file: stores_bababoom.json
+
+    steps:
+      - name: Decide whether to run this brand
+        id: gate
+        run: |
+          SELECTED="${{ github.event.inputs.brand }}"
+          if [ -z "$SELECTED" ] || [ "$SELECTED" = "both" ] || [ "$SELECTED" = "${{ matrix.brand_key }}" ]; then
+            echo "run=yes" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=no" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'yes'
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'yes'
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        if: steps.gate.outputs.run == 'yes'
+        run: pip install -r requirements.txt
+
+      - name: Discover locations
+        if: steps.gate.outputs.run == 'yes'
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          BRAND_KEY: ${{ matrix.brand_key }}
+          OUTPUT_FILE: ${{ matrix.output_file }}
+        run: python discover_stores.py
+
+      - name: Commit updated store list
+        if: steps.gate.outputs.run == 'yes'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${{ matrix.output_file }}"
+          git diff --cached --quiet || git commit -m "Refresh ${{ matrix.brand_key }} locations [automated]"
+          git pull --rebase
+          git push
