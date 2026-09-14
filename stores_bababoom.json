@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "place_id": "ChIJET923pcFdkgRSguCHHPCSA0",
+    "name": "BABABOOM",
+    "address": "30 Battersea Rise, London SW11 1EE, UK",
+    "lat": 51.4610384,
+    "lng": -0.1645318
+  },
+  {
+    "place_id": "ChIJ3fu6yCmn2EcR0cV0glc6m20",
+    "name": "BABABOOM",
+    "address": "First Floor, World Food Court Westfield, Montfichet Rd, London E20 1EJ, UK",
+    "lat": 51.5431284,
+    "lng": -0.0064722
+  },
+  {
+    "place_id": "ChIJBcojom0bdkgRxSZvDRD9c6E",
+    "name": "BABABOOM Angel",
+    "address": "Unit R2, 1 st Floor, The Shopping Centre, Angel Central, 39 Parkfield St, London N1 0PS, UK",
+    "lat": 51.5342084,
+    "lng": -0.10646689999999999
+  }
+]
