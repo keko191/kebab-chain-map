@@ -1,6 +1,12 @@
 name: Refresh kebab chain stores
 
 on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/discover-stores.yml"
+      - "discover_stores.py"
+      - "requirements.txt"
   workflow_dispatch:
     inputs:
       brand:
