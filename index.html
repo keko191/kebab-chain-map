@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>London Doner Chain Map</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<style>
+  html, body { height:100%; margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  #map { height:100%; width:100%; }
+  .panel {
+    position:absolute; top:12px; right:12px; z-index:1000;
+    background:white; padding:14px 16px; border-radius:10px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.2); font-size:14px; width:240px;
+  }
+  .panel h3 { margin:0 0 10px 0; font-size:16px; }
+  .panel label { display:flex; align-items:center; gap:8px; margin:7px 0; cursor:pointer; }
+  .panel .row { display:flex; align-items:center; justify-content:space-between; margin:8px 0 5px; }
+  .swatch { width:12px; height:12px; border-radius:50%; display:inline-block; border:1px solid rgba(0,0,0,.15); }
+  .gdk-swatch { background:#F28C28; }
+  .bababoom-swatch { background:#000000; }
+  .panel input[type=range] { width:100%; }
+  .note { font-size:12px; color:#555; line-height:1.35; margin:10px 0 0; }
+  #status { position:absolute; bottom:12px; left:12px; z-index:1000; background:white; padding:6px 10px; border-radius:6px; font-size:12px; box-shadow:0 1px 6px rgba(0,0,0,0.15); }
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+<div class="panel">
+  <h3>London Doner Chain Map</h3>
+  <label><input type="checkbox" id="toggleGdk" checked> <span class="swatch gdk-swatch"></span> German Doner Kebab</label>
+  <label><input type="checkbox" id="toggleBababoom" checked> <span class="swatch bababoom-swatch"></span> BABABOOM</label>
+  <div class="row"><span>Radius (m)</span><span id="radiusVal">500</span></div>
+  <input type="range" id="radiusSlider" min="0" max="1500" step="50" value="500">
+  <p class="note">Orange = GDK. Black = BABABOOM. Blank areas with no overlapping circles are potential competitive gaps.</p>
+</div>
+<div id="status">Loading store data…</div>
+
+<script>
+const map = L.map('map').setView([51.505, -0.14], 11);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom:19,
+  attribution:'&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+let gdkLayer = L.layerGroup().addTo(map);
+let bababoomLayer = L.layerGroup().addTo(map);
+let currentRadius = 500;
+
+function addStores(stores, layerGroup, color, brandLabel, isBlack=false) {
+  layerGroup.clearLayers();
+  stores.forEach(store => {
+    if (store.lat == null || store.lng == null) return;
+
+    const coverage = L.circle([store.lat, store.lng], {
+      radius: currentRadius,
+      color: color,
+      fillColor: color,
+      fillOpacity: isBlack ? 0.045 : 0.065,
+      weight:0,
+      interactive:false
+    }).addTo(layerGroup);
+
+    const marker = L.circleMarker([store.lat, store.lng], {
+      radius:5,
+      color:isBlack ? '#ffffff' : color,
+      fillColor:color,
+      fillOpacity:1,
+      weight:isBlack ? 1.5 : 1
+    }).bindPopup(`<b>${brandLabel}</b><br>${store.name || ''}<br>${store.address || ''}`);
+
+    marker.addTo(layerGroup);
+  });
+}
+
+function updateRadius(newRadius) {
+  currentRadius = newRadius;
+  document.getElementById('radiusVal').textContent = newRadius;
+  addStores(window._gdkData || [], gdkLayer, '#F28C28', 'German Doner Kebab');
+  addStores(window._bababoomData || [], bababoomLayer, '#000000', 'BABABOOM', true);
+}
+
+document.getElementById('radiusSlider').addEventListener('input', e => updateRadius(parseInt(e.target.value)));
+document.getElementById('toggleGdk').addEventListener('change', e => e.target.checked ? map.addLayer(gdkLayer) : map.removeLayer(gdkLayer));
+document.getElementById('toggleBababoom').addEventListener('change', e => e.target.checked ? map.addLayer(bababoomLayer) : map.removeLayer(bababoomLayer));
+
+async function loadData() {
+  const status = document.getElementById('status');
+  try {
+    const [gdkResp, bababoomResp] = await Promise.all([
+      fetch('stores_gdk.json?v=' + Date.now()),
+      fetch('stores_bababoom.json?v=' + Date.now())
+    ]);
+    if (!gdkResp.ok || !bababoomResp.ok) throw new Error('Could not fetch store files');
+
+    window._gdkData = await gdkResp.json();
+    window._bababoomData = await bababoomResp.json();
+    updateRadius(currentRadius);
+
+    const all = [...window._gdkData, ...window._bababoomData].filter(s => s.lat != null && s.lng != null);
+    if (all.length) {
+      const bounds = L.latLngBounds(all.map(s => [s.lat, s.lng]));
+      map.fitBounds(bounds, {padding:[30,30]});
+    }
+    status.textContent = `${window._gdkData.length} GDK · ${window._bababoomData.length} BABABOOM`;
+  } catch (err) {
+    status.textContent = 'Store data not loaded yet';
+    console.error(err);
+  }
+}
+
+loadData();
+</script>
+</body>
+</html>
