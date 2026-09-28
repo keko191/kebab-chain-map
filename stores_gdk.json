@@ -350,6 +350,13 @@
     "lng": 0.9008761999999998
   },
   {
+    "place_id": "ChIJFSTxi--FdUgRQXfOUuM4Hrg",
+    "name": "German Doner Kebab (GDK)",
+    "address": "51-52 North St, Brighton and Hove, Brighton BN1 1RH, UK",
+    "lat": 50.8232626,
+    "lng": -0.1423596
+  },
+  {
     "place_id": "ChIJDfQ63HARdkgR8IKHDhYRP8Q",
     "name": "German Doner Kebab (GDK)",
     "address": "54 Willesden Ln, High Rd, London NW10 2PU, UK",
@@ -467,6 +474,13 @@
     "address": "94 Cranbrook Rd, Cranbrook, Ilford IG1 4NH, UK",
     "lat": 51.561249,
     "lng": 0.06944
+  },
+  {
+    "place_id": "ChIJe_Y6scJx2EcRS7MVU9bTk0s",
+    "name": "German Doner Kebab (GDK)",
+    "address": "A14, Swavesey, Cambridge CB23 4WU, UK",
+    "lat": 52.2691424,
+    "lng": -0.008751
   },
   {
     "place_id": "ChIJCyhDjOqn2EcRUUTppuzoS0w",
