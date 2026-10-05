@@ -325,8 +325,8 @@
     "place_id": "ChIJJavLyNvr2EcR6A-uqV7LtU4",
     "name": "German Doner Kebab (GDK)",
     "address": "5 Moulsham St, Chelmsford CM2 0HR, UK",
-    "lat": 51.7312204,
-    "lng": 0.47463790000000006
+    "lat": 51.731195799999995,
+    "lng": 0.47457299999999997
   },
   {
     "place_id": "ChIJ76qPJ5a32EcRbkkPwMT9iXU",
@@ -348,13 +348,6 @@
     "address": "50 High St, Colchester CO1 1DH, UK",
     "lat": 51.889685,
     "lng": 0.9008761999999998
-  },
-  {
-    "place_id": "ChIJFSTxi--FdUgRQXfOUuM4Hrg",
-    "name": "German Doner Kebab (GDK)",
-    "address": "51-52 North St, Brighton and Hove, Brighton BN1 1RH, UK",
-    "lat": 50.8232626,
-    "lng": -0.1423596
   },
   {
     "place_id": "ChIJDfQ63HARdkgR8IKHDhYRP8Q",
@@ -476,13 +469,6 @@
     "lng": 0.06944
   },
   {
-    "place_id": "ChIJe_Y6scJx2EcRS7MVU9bTk0s",
-    "name": "German Doner Kebab (GDK)",
-    "address": "A14, Swavesey, Cambridge CB23 4WU, UK",
-    "lat": 52.2691424,
-    "lng": -0.008751
-  },
-  {
     "place_id": "ChIJCyhDjOqn2EcRUUTppuzoS0w",
     "name": "German Doner Kebab (GDK)",
     "address": "Barkingside, 122A High St, Ilford IG6 2DZ, UK",
@@ -502,6 +488,13 @@
     "address": "Shopping Centre, Prince Charles Dr, Brent Cross, London NW4 3FP, UK",
     "lat": 51.577056199999994,
     "lng": -0.224346
+  },
+  {
+    "place_id": "ChIJQY6ZAgIhdEgRkbYZkOtVLGk",
+    "name": "German Doner Kebab (GDK)",
+    "address": "Station Mall, Old Basing Mall, Basingstoke RG21 7QU, UK",
+    "lat": 51.267046699999995,
+    "lng": -1.0880146
   },
   {
     "place_id": "ChIJ_xrLpFx_dkgRelf_PkrS4v4",
