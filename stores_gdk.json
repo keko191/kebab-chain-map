@@ -199,8 +199,8 @@
     "place_id": "ChIJJfk78KMt30cRrFkw48ca1dQ",
     "name": "German Doner Kebab (GDK)",
     "address": "27, Hempstead Valley Shopping Centre, Hempstead, Gillingham ME7 3PD, UK",
-    "lat": 51.3416687,
-    "lng": 0.5727407
+    "lat": 51.3416692,
+    "lng": 0.5741684
   },
   {
     "place_id": "ChIJgyCntR9hdkgR5myRlDr4ZZE",
@@ -222,6 +222,13 @@
     "address": "304 Kilburn High Rd, London NW6 2DB, UK",
     "lat": 51.5443583,
     "lng": -0.20067279999999998
+  },
+  {
+    "place_id": "ChIJ4UqRG-ZjdkgRSQNrkpYB60Y",
+    "name": "German Doner Kebab (GDK)",
+    "address": "31/33, 31 High St, Maidenhead SL6 1JG, UK",
+    "lat": 51.5227924,
+    "lng": -0.7194496
   },
   {
     "place_id": "ChIJ0TSTJqsbdkgRWTEJ2u5jpI4",
@@ -336,6 +343,13 @@
     "lng": 0.9008761999999998
   },
   {
+    "place_id": "ChIJFSTxi--FdUgRQXfOUuM4Hrg",
+    "name": "German Doner Kebab (GDK)",
+    "address": "51-52 North St, Brighton and Hove, Brighton BN1 1RH, UK",
+    "lat": 50.8232626,
+    "lng": -0.1423596
+  },
+  {
     "place_id": "ChIJDfQ63HARdkgR8IKHDhYRP8Q",
     "name": "German Doner Kebab (GDK)",
     "address": "54 Willesden Ln, High Rd, London NW10 2PU, UK",
@@ -420,13 +434,6 @@
     "lng": 0.0129435
   },
   {
-    "place_id": "ChIJx-2VQh-3d0gRAFB-N_8ScjU",
-    "name": "German Doner Kebab (GDK)",
-    "address": "73 High St, Bedford MK40 1NE, UK",
-    "lat": 52.1370047,
-    "lng": -0.46657790000000005
-  },
-  {
     "place_id": "ChIJpY2vZ-8ZdkgRIXGFM9Fgkuk",
     "name": "German Doner Kebab (GDK)",
     "address": "766 High Rd, London N12 9QH, UK",
@@ -460,13 +467,6 @@
     "address": "94 Cranbrook Rd, Cranbrook, Ilford IG1 4NH, UK",
     "lat": 51.561249,
     "lng": 0.06944
-  },
-  {
-    "place_id": "ChIJe_Y6scJx2EcRS7MVU9bTk0s",
-    "name": "German Doner Kebab (GDK)",
-    "address": "A14, Swavesey, Cambridge CB23 4WU, UK",
-    "lat": 52.2691424,
-    "lng": -0.008751
   },
   {
     "place_id": "ChIJCyhDjOqn2EcRUUTppuzoS0w",
