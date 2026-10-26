@@ -469,6 +469,13 @@
     "lng": 0.06944
   },
   {
+    "place_id": "ChIJe_Y6scJx2EcRS7MVU9bTk0s",
+    "name": "German Doner Kebab (GDK)",
+    "address": "A14, Swavesey, Cambridge CB23 4WU, UK",
+    "lat": 52.2691424,
+    "lng": -0.008751
+  },
+  {
     "place_id": "ChIJCyhDjOqn2EcRUUTppuzoS0w",
     "name": "German Doner Kebab (GDK)",
     "address": "Barkingside, 122A High St, Ilford IG6 2DZ, UK",
@@ -481,6 +488,13 @@
     "address": "Crawley Leisure Park, London Rd, Crawley RH10 8LR, UK",
     "lat": 51.119363799999995,
     "lng": -0.18914870000000003
+  },
+  {
+    "place_id": "ChIJZ0pLBK7BcEgRuBpj4MJpuh4",
+    "name": "German Doner Kebab (GDK)",
+    "address": "Kingfisher Square, Redditch B97 4EQ, UK",
+    "lat": 52.3056944,
+    "lng": -1.9445024000000002
   },
   {
     "place_id": "ChIJZf_9XIsRdkgRilZz6A8Wrkw",
@@ -558,6 +572,13 @@
     "address": "Unit R10, Victoria Place Shopping Centre, Victoria Station, London SW1 9SJ, UK",
     "lat": 51.493974099999996,
     "lng": -0.1458382
+  },
+  {
+    "place_id": "ChIJGeJ2rmGl3kcRDgFu0KpNdDI",
+    "name": "German Doner Kebab (GDK)",
+    "address": "Unit R2A, Leisure Park, St James St, Dover CT16 1QD, UK",
+    "lat": 51.1255252,
+    "lng": 1.3175865999999998
   },
   {
     "place_id": "ChIJZwtEFZ4ddkgRlDSNWkhiQ4o",
