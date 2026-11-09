@@ -42,13 +42,6 @@
     "lng": -0.3277232
   },
   {
-    "place_id": "ChIJW-sgoAWl2EcRTQpkOFtpadI",
-    "name": "German Doner Kebab (GDK)",
-    "address": "1201 High Rd, Chadwell Heath, Romford RM6 4AL, UK",
-    "lat": 51.570664199999996,
-    "lng": 0.12917
-  },
-  {
     "place_id": "ChIJw0Qgp2gDdkgR8jWhChPfwuo",
     "name": "German Doner Kebab (GDK)",
     "address": "127 Rushey Grn, London SE6 4AA, UK",
@@ -149,7 +142,7 @@
   {
     "place_id": "ChIJRQMROKYFdkgRscKuHGTI518",
     "name": "German Doner Kebab (GDK)",
-    "address": "222 Borough High St High Street, London SE1 1JX, UK",
+    "address": "222 Borough High St High Street, 222 Borough High St, London SE1 1JX, UK",
     "lat": 51.5008346,
     "lng": -0.0941712
   },
@@ -208,13 +201,6 @@
     "address": "27-31 White Hart St, High Wycombe HP11 2HL, UK",
     "lat": 51.629983499999994,
     "lng": -0.7529530999999999
-  },
-  {
-    "place_id": "ChIJq4XaFg0fdkgRpGQTHBAABLA",
-    "name": "German Doner Kebab (GDK)",
-    "address": "273 Chingford Mount Rd, London E4 8LP, UK",
-    "lat": 51.6168255,
-    "lng": -0.0176515
   },
   {
     "place_id": "ChIJZ1Qa0G8QdkgRaUG_c76GXiA",
@@ -427,13 +413,6 @@
     "lng": -0.196456
   },
   {
-    "place_id": "ChIJM9c5bUin2EcRw80SIRn54Wo",
-    "name": "German Doner Kebab (GDK)",
-    "address": "706 High Rd Leytonstone, Bushwood, London E11 3AJ, UK",
-    "lat": 51.569514,
-    "lng": 0.0129435
-  },
-  {
     "place_id": "ChIJpY2vZ-8ZdkgRIXGFM9Fgkuk",
     "name": "German Doner Kebab (GDK)",
     "address": "766 High Rd, London N12 9QH, UK",
@@ -467,6 +446,13 @@
     "address": "94 Cranbrook Rd, Cranbrook, Ilford IG1 4NH, UK",
     "lat": 51.561249,
     "lng": 0.06944
+  },
+  {
+    "place_id": "ChIJe_Y6scJx2EcRS7MVU9bTk0s",
+    "name": "German Doner Kebab (GDK)",
+    "address": "A14, Swavesey, Cambridge CB23 4WU, UK",
+    "lat": 52.2691424,
+    "lng": -0.008751
   },
   {
     "place_id": "ChIJCyhDjOqn2EcRUUTppuzoS0w",
@@ -532,6 +518,20 @@
     "lng": -0.11771090000000001
   },
   {
+    "place_id": "ChIJxbcZXwCjd0gRSeuaW-b14pI",
+    "name": "German Doner Kebab (GDK)",
+    "address": "Unit 2LA, Rushden NN10 6AR, UK",
+    "lat": 52.3008421,
+    "lng": -0.6274526
+  },
+  {
+    "place_id": "ChIJe_Tv8O7BdkgRi7CVhj2d_l4",
+    "name": "German Doner Kebab (GDK)",
+    "address": "Unit 4, Tyndale House, 134A Cowley Rd, Oxford OX4 1JE, UK",
+    "lat": 51.747925699999996,
+    "lng": -1.2376652000000001
+  },
+  {
     "place_id": "ChIJrSbntJ6x2EcRLhCeKLz_RnE",
     "name": "German Doner Kebab (GDK)",
     "address": "Unit 401 - 420 Intu, Lakeside, W Thurrock Way, West Thurrock, Grays RM20 2ZP, UK",
@@ -558,6 +558,13 @@
     "address": "Unit R10, Victoria Place Shopping Centre, Victoria Station, London SW1 9SJ, UK",
     "lat": 51.493974099999996,
     "lng": -0.1458382
+  },
+  {
+    "place_id": "ChIJGeJ2rmGl3kcRDgFu0KpNdDI",
+    "name": "German Doner Kebab (GDK)",
+    "address": "Unit R2A, Leisure Park, St James St, Dover CT16 1QD, UK",
+    "lat": 51.1255252,
+    "lng": 1.3175865999999998
   },
   {
     "place_id": "ChIJZwtEFZ4ddkgRlDSNWkhiQ4o",
